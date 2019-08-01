@@ -14,7 +14,7 @@ module.exports = lando => {
       const app = lando.getApp(options._app.root);
       // Restart it if we can!
       if (app) {
-        console.log(chalk.green('Stopping your app... just so we can start it up again ¯\\_(ツ)_/¯'));
+        console.log(chalk.green('Stopping your app. Your app will restart after these messages...'));
         return utils.appToggle(app, 'restart', table, lando.cli.makeArt());
       }
     },
